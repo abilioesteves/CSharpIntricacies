@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace AWebAPIApp.Models {
-    public class ARequestModel {
+namespace AClassLibrary.Models.DTOs {
+    public class ARequestDTO {
 
         public string AStringProperty { get; set; }
 

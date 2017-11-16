@@ -1,4 +1,4 @@
-﻿using AWebAPIApp.Models;
+﻿using AClassLibrary.Models.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,10 +12,10 @@ namespace AWebAPIApp.Controllers
     {
 
         [HttpGet]
-        public AResponseModel AnAction([FromUri] ARequestModel request) {
+        public AResponseDTO AnAction([FromUri] ARequestDTO request) {
             // do something with request.AStringProperty
 
-            return new AResponseModel {
+            return new AResponseDTO {
                 AGuidProperty = Guid.NewGuid(),
                 AReversedStringProperty = new string(request.AStringProperty.ToCharArray().Reverse().ToArray())
             };
