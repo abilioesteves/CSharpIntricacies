@@ -32,6 +32,10 @@ namespace AConsoleApp {
 
             Console.WriteLine("sArray: {0}", string.Join(" ", sArray));
             Console.WriteLine("iArray: {0}", string.Join(" ", iArray));
+
+            Console.WriteLine($"{nameof(Interops.ShowMessageBox)}: ");
+            Interops.ShowMessageBox();
+
             Console.ReadLine();
         }
     }

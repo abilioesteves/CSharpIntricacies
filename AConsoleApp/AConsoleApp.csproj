@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Checked.cs" />
+    <Compile Include="Interops.cs" />
     <Compile Include="LINQQueryExpressions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
