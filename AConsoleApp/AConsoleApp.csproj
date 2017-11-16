@@ -42,15 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Checked.cs" />
-    <Compile Include="Interops.cs" />
-    <Compile Include="LINQQueryExpressions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Skeleton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AClassLibrary\AClassLibrary.csproj">
+      <Project>{08C6D3EC-D599-41C9-AD48-F8BEBDF7B9D6}</Project>
+      <Name>AClassLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

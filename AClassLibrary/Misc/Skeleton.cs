@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 // A skeleton of a C# program
-namespace AConsoleApp {
+namespace AClassLibrary {
     class Skeleton {
     }
 

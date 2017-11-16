@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AConsoleApp {
+namespace AClassLibrary {
     public class Interops {
 
         [DllImport("User32.dll", CharSet=CharSet.Unicode)]

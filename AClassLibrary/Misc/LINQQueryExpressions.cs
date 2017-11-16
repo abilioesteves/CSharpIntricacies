@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AConsoleApp {
+namespace AClassLibrary {
     public class Arrays {
 
         public static void Simple01() {

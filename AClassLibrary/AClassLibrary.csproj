@@ -40,6 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Misc\Checked.cs" />
+    <Compile Include="Misc\Interops.cs" />
+    <Compile Include="Misc\LINQQueryExpressions.cs" />
+    <Compile Include="Misc\Skeleton.cs" />
     <Compile Include="Models\DTOs\ARequestDTO.cs" />
     <Compile Include="Models\DTOs\AResponseDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

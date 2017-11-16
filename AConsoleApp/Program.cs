@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,12 @@ namespace AConsoleApp {
     class Program {
         static void Main(string[] args) {
 
+            TestMisc();
+
+            Console.ReadLine();
+        }
+
+        static void TestMisc() {
             Console.WriteLine($"{nameof(Checked.TestUnchecked)}: ");
             Console.WriteLine(Checked.TestUnchecked());
 
@@ -35,8 +42,6 @@ namespace AConsoleApp {
 
             Console.WriteLine($"{nameof(Interops.ShowMessageBox)}: ");
             Interops.ShowMessageBox();
-
-            Console.ReadLine();
         }
     }
 }
