@@ -78,13 +78,14 @@ namespace AUnitTestProject.ManageProgramFlow {
             var q1 = from x in nums
                 select x * Math.PI;
 
-            watch = Stopwatch.StartNew();
+            watch.Restart();
             q1.ToList().ForEach(d => Validate(d, 0, 10000000));
             Trace.WriteLine($"Sequential all the way: {watch.Elapsed.ToString()}");
 
             var q2 = from x in nums.AsParallel()
                      select x * Math.PI;
-            watch = Stopwatch.StartNew();
+
+            watch.Restart();
             q2.ForAll(i => Validate(i, 0, 10000000));
             Trace.WriteLine($"Letting the PLINQ handle for itself: {watch.Elapsed.ToString()}");
         }
@@ -92,6 +93,34 @@ namespace AUnitTestProject.ManageProgramFlow {
         void Validate(double n, int f, int c) {
             var i = (int)Math.Round(n / Math.PI);
             Assert.IsTrue(i >= f && i <= c);
+        }
+
+        [TestMethod]
+        public void TestAnotherPartitioner() {
+            var collection = Enumerable.Range(0, int.MaxValue);
+
+            Trace.WriteLine("Iterating across all values sequentialy");
+            int i = 0;
+            var watch = Stopwatch.StartNew();
+            foreach (var item in collection) {
+                i = 1;
+            }
+            Trace.WriteLine($"Done in {watch.ElapsedMilliseconds}ms{Environment.NewLine}");
+
+            Trace.WriteLine("Iterating using parallel foreach with a Custom Partitioner");
+            var part = Partitioner.Create(0, int.MaxValue);
+            watch.Restart();
+            Parallel.ForEach(part, (range, loopstate) => {
+                for (int x = range.Item1; x < range.Item2; x++) {
+                    i = 1;
+                }
+            });
+            Trace.WriteLine($"Done in {watch.ElapsedMilliseconds}ms{Environment.NewLine}");
+
+            Trace.WriteLine("Iterating using parallel foreach withOUT a Custom Partitioner");
+            watch.Restart();
+            collection.AsParallel().ForAll((x) => i = 1);
+            Trace.WriteLine($"Done in {watch.ElapsedMilliseconds}ms");
         }
     }
 }
