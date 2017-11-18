@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ManageProgramFlow\EventsAndCallbacks.cs" />
+    <Compile Include="ManageProgramFlow\MultithreadingAndAsynchronousProcessing.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

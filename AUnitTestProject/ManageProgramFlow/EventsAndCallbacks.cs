@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace AUnitTestProject.ManageProgramFlow {
 
-    [TestClass]
+    [TestClass, TestCategory(nameof(ManageProgramFlow))]
     public class EventsAndCallbacks {
 
-        [TestMethod, TestCategory("ManageProgramFlow")]
+        [TestMethod]
         public void CreateEventHandlers() {
             int i = 0;
             var counter = new Counter();
