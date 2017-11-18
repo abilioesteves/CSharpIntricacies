@@ -49,7 +49,7 @@ namespace AUnitTestProject.ManageProgramFlow {
     // to a type-safe function pointer or a callback. A delegate is sufficient to define a delegate class;
     delegate void ThresholdReachedEventHandler(ThresholdReachedEventArgs e);
 
-    class ThresholdReachedEventArgs {
+    class ThresholdReachedEventArgs : EventArgs {
         public bool IsThresholdReached { get; set; }
     }
 
