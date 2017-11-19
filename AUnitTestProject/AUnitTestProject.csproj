@@ -48,6 +48,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateAndUseTypes\Reflection.cs" />
     <Compile Include="ManageProgramFlow\EventsAndCallbacks.cs" />
     <Compile Include="ManageProgramFlow\MultithreadingAndAsynchronousProcessing.cs" />
     <Compile Include="UnitTest1.cs" />
@@ -57,7 +58,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CreateAndUseTypes\" />
     <Folder Include="DebugApplicationsAndImplementSecurity\" />
     <Folder Include="ImplementDataAccess\" />
   </ItemGroup>
